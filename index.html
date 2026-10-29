@@ -3,10 +3,599 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CHAKRAVYUH-Innovexa - Team 106</title>
+    <title>CIRCUITVERSE AI — Smart ENTC Learning & Innovation Platform</title>
+    <!-- Bootstrap 5 CSS CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons CDN -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
 </head>
-<body>
-    <h1>CHAKRAVYUH AI Vibe Coding Challenge</h1>
-    <p>Our website project starts here.</p>
+<body class="bg-dark text-light min-vh-dvh d-flex flex-column">
+
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-xl navbar-dark fixed-top glass-nav border-bottom border-secondary border-opacity-25">
+        <div class="container-fluid px-4">
+            <a class="navbar-brand d-flex align-items-center gap-2 cursor-pointer" onclick="switchSection('dashboard')">
+                <div class="brand-icon-box rounded-3 bg-gradient-cyan-violet d-flex align-items-center justify-content-center shadow-neon">
+                    <i class="bi bi-cpu-fill text-dark fs-5"></i>
+                </div>
+                <div>
+                    <span class="fw-black tracking-wider fs-5 bg-gradient-text">CIRCUITVERSE AI</span>
+                    <small class="d-block text-muted text-uppercase tracking-widest" style="font-size: 9px;">CHAKRAVYUH 2026</small>
+                </div>
+            </a>
+            
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav align-xl-center gap-1 py-3 py-xl-0">
+                    <li class="nav-item">
+                        <a class="nav-link active rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="dashboard" onclick="switchSection('dashboard')"><i class="bi bi-speedometer2 me-1"></i> Dashboard</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="learning" onclick="switchSection('learning')"><i class="bi bi-book-half me-1"></i> Learning Hub</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="lab" onclick="switchSection('lab')"><i class="bi bi-cpu me-1"></i> Virtual Lab</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="iot" onclick="switchSection('iot')"><i class="bi bi-house-gear me-1"></i> Smart IoT Lab</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="quiz" onclick="switchSection('quiz')"><i class="bi bi-award me-1"></i> Quiz Arena</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="challenges" onclick="switchSection('challenges')"><i class="bi bi-terminal me-1"></i> Challenges</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="assistant" onclick="switchSection('assistant')"><i class="bi bi-robot me-1"></i> AI Tutor</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link rounded-pill px-3 py-2 text-xs fw-semibold" href="#" data-target="progress" onclick="switchSection('progress')"><i class="bi bi-check-circle me-1"></i> Progress</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main class="flex-grow-1 pt-5 mt-4">
+
+        <!-- 1. DASHBOARD SECTION -->
+        <section id="app-dashboard" class="container py-5 app-section">
+            <div class="row align-items-center g-5 py-4">
+                <div class="col-lg-7">
+                    <div class="badge bg-cyan-subtle text-cyan border border-cyan border-opacity-25 px-3 py-2 rounded-pill mb-4 fw-bold tracking-wider fs-xs">
+                        <i class="bi bi-shield-check me-1"></i> CHAKRAVYUH 2026 AI VIBE CODING CHALLENGE
+                    </div>
+                    <h1 class="display-4 fw-black text-white mb-3 tracking-tight">
+                        Engineer The Future <br>
+                        <span class="bg-gradient-text">With Intelligent ENTC AI.</span>
+                    </h1>
+                    <p class="text-secondary mb-4 fs-6">
+                        Explore virtual electronics laboratories, experiment with digital combinational logic, master communication telemetry, and simulate smart IoT automation systems in real time.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <button class="btn btn-cyan px-4 py-3 rounded-4 fw-bold shadow-neon d-flex align-items-center gap-2" onclick="switchSection('learning')">
+                            <i class="bi bi-book"></i> Start Learning <i class="bi bi-arrow-right"></i>
+                        </button>
+                        <button class="btn btn-glass px-4 py-3 rounded-4 fw-bold text-white d-flex align-items-center gap-2" onclick="switchSection('lab')">
+                            <i class="bi bi-cpu text-cyan"></i> Virtual Lab
+                        </button>
+                        <button class="btn btn-glass px-4 py-3 rounded-4 fw-bold text-white d-flex align-items-center gap-2" onclick="switchSection('iot')">
+                            <i class="bi bi-lightning-charge text-violet"></i> Smart IoT Lab
+                        </button>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 shadow-glow position-relative overflow-hidden">
+                        <div class="glow-blob bg-cyan opacity-10"></div>
+                        <h4 class="fw-bold text-white mb-4"><i class="bi bi-activity text-cyan me-2"></i> Live Platform Telemetry</h4>
+                        <div class="row g-3">
+                            <div class="col-6">
+                                <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                    <small class="text-muted d-block uppercase tracking-wider">Modules</small>
+                                    <h3 class="fw-black text-white mb-0" id="stat-modules">0 / 6</h3>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                    <small class="text-muted d-block uppercase tracking-wider">Quiz Best</small>
+                                    <h3 class="fw-black text-cyan mb-0" id="stat-quiz">0%</h3>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                    <small class="text-muted d-block uppercase tracking-wider">Challenges</small>
+                                    <h3 class="fw-black text-violet mb-0" id="stat-challenges">0 pts</h3>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                    <small class="text-muted d-block uppercase tracking-wider">AI Tutor</small>
+                                    <h3 class="fw-black text-success mb-0">ACTIVE</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Journey Section -->
+            <div class="row mt-5 pt-4">
+                <div class="col-12 text-center mb-5">
+                    <h3 class="fw-bold text-white">Your Engineering Innovation Journey</h3>
+                    <p class="text-secondary fs-sm">From foundational electronics theory to deployed intelligent IoT systems.</p>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 h-100 text-center">
+                        <div class="icon-circle bg-cyan bg-opacity-10 text-cyan mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="bi bi-book fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold text-white">1. Learn</h5>
+                        <p class="text-secondary fs-xs mb-0">Master digital logic, microcontrollers, and communication systems theory.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 h-100 text-center">
+                        <div class="icon-circle bg-violet bg-opacity-10 text-violet mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="bi bi-cpu fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold text-white">2. Simulate</h5>
+                        <p class="text-secondary fs-xs mb-0">Test logic gates, adders, Ohm's law, and oscilloscope waveforms interactively.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 h-100 text-center">
+                        <div class="icon-circle bg-success bg-opacity-10 text-success mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="bi bi-terminal fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold text-white">3. Solve</h5>
+                        <p class="text-secondary fs-xs mb-0">Tackle engineering challenges, fault diagnosis, and timed quizzes.</p>
+                    </div>
+                </div>
+                <div class="col-md-3 mb-4">
+                    <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 h-100 text-center">
+                        <div class="icon-circle bg-warning bg-opacity-10 text-warning mx-auto mb-3 rounded-circle d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                            <i class="bi bi-award fs-4"></i>
+                        </div>
+                        <h5 class="fw-bold text-white">4. Track</h5>
+                        <p class="text-secondary fs-xs mb-0">Monitor persistent learning metrics and unlock technical badges.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. LEARNING HUB SECTION -->
+        <section id="app-learning" class="container py-5 app-section d-none">
+            <div class="row mb-4">
+                <div class="col-12">
+                    <h2 class="fw-black text-white">ENTC Learning Hub</h2>
+                    <p class="text-secondary">Structured modules designed for comprehensive electronics engineering mastery.</p>
+                </div>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="list-group glass-card border border-secondary border-opacity-25 rounded-4 overflow-hidden p-2 gap-2" id="module-list-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between" id="module-content-pane">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. VIRTUAL LAB SECTION -->
+        <section id="app-lab" class="container py-5 app-section d-none">
+            <div class="row mb-4 align-items-center">
+                <div class="col">
+                    <h2 class="fw-black text-white">Virtual Electronics Lab</h2>
+                    <p class="text-secondary">Advanced simulation tools for digital combinational logic, analog circuits, and signals.</p>
+                </div>
+                <div class="col-auto">
+                    <div class="btn-group glass-card p-1 rounded-pill border border-secondary border-opacity-25" role="tablist">
+                        <button class="btn btn-sm rounded-pill px-3 active fw-bold text-xs" onclick="switchLabTab('logic')" id="btn-tab-logic">Digital Logic</button>
+                        <button class="btn btn-sm rounded-pill px-3 fw-bold text-xs text-secondary" onclick="switchLabTab('analog')" id="btn-tab-analog">Analog Circuits</button>
+                        <button class="btn btn-sm rounded-pill px-3 fw-bold text-xs text-secondary" onclick="switchLabTab('signal')" id="btn-tab-signal">Waveform</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Digital Logic Tab (Gates, Adders) -->
+            <div id="lab-tab-logic" class="lab-sub-tab">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 space-y-3">
+                            <h5 class="fw-bold text-white mb-3">Select Component / Circuit</h5>
+                            <div class="d-grid gap-2" id="digital-component-buttons">
+                                <button class="btn btn-sm btn-cyan fw-bold rounded-3 py-2" onclick="setDigitalMode('gate')" id="mode-gate-btn">Logic Gates</button>
+                                <button class="btn btn-sm btn-outline-secondary text-light fw-bold rounded-3 py-2" onclick="setDigitalMode('halfadder')" id="mode-ha-btn">Half Adder</button>
+                                <button class="btn btn-sm btn-outline-secondary text-light fw-bold rounded-3 py-2" onclick="setDigitalMode('fulladder')" id="mode-fa-btn">Full Adder</button>
+                            </div>
+                            <hr class="border-secondary opacity-25">
+                            <div id="gate-selector-container">
+                                <h6 class="fw-bold text-white mb-2">Logic Gate Type</h6>
+                                <div class="row g-2 mb-3" id="logic-gate-buttons"></div>
+                            </div>
+                            <h6 class="fw-bold text-white mb-2">Binary Inputs</h6>
+                            <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-black bg-opacity-50 border border-secondary border-opacity-25 mb-2">
+                                <span class="text-secondary fw-semibold">Input A</span>
+                                <button class="btn btn-sm btn-outline-cyan fw-bold px-3" id="input-a-btn" onclick="toggleInput('A')">0</button>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-black bg-opacity-50 border border-secondary border-opacity-25" id="input-b-container">
+                                <span class="text-secondary fw-semibold">Input B</span>
+                                <button class="btn btn-sm btn-outline-cyan fw-bold px-3" id="input-b-btn" onclick="toggleInput('B')">0</button>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-black bg-opacity-50 border border-secondary border-opacity-25 mt-2" id="input-c-container" style="display:none !important;">
+                                <span class="text-secondary fw-semibold">Carry In ($C_{in}$)</span>
+                                <button class="btn btn-sm btn-outline-cyan fw-bold px-3" id="input-c-btn" onclick="toggleInput('C')">0</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <div class="d-flex justify-content-between align-items-center border-bottom border-secondary border-opacity-25 pb-3 mb-4">
+                                    <h4 class="fw-bold text-white mb-0" id="active-digital-title">AND Gate Simulation</h4>
+                                    <span class="badge bg-cyan bg-opacity-10 text-cyan border border-cyan border-opacity-25">Live Interactive</span>
+                                </div>
+                                <div class="row text-center py-5 align-items-center bg-black bg-opacity-40 rounded-4 border border-secondary border-opacity-10 mb-4" id="digital-display-box">
+                                    <!-- Populated by JS -->
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                <h6 class="fw-bold text-white mb-1"><i class="bi bi-info-circle text-cyan me-1"></i> Circuit Principle</h6>
+                                <p class="text-secondary fs-xs mb-0" id="digital-description">Loading description...</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Analog Circuits Tab (Ohm's Law, Resistor Combinations, LED Resistor) -->
+            <div id="lab-tab-analog" class="lab-sub-tab d-none">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 space-y-4">
+                            <h5 class="fw-bold text-white mb-3">Analog Circuit Calculator</h5>
+                            <div class="btn-group w-100 mb-3" role="group">
+                                <input type="radio" class="btn-check" name="analogMode" id="modeOhm" autocomplete="off" checked onclick="setAnalogMode('ohm')">
+                                <label class="btn btn-outline-cyan text-xs fw-bold" for="modeOhm">Ohm's Law</label>
+                                <input type="radio" class="btn-check" name="analogMode" id="modeRes" autocomplete="off" onclick="setAnalogMode('resistors')">
+                                <label class="btn btn-outline-cyan text-xs fw-bold" for="modeRes">Resistors</label>
+                            </div>
+
+                            <div id="analog-controls-ohm">
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between text-xs mb-1">
+                                        <span class="text-secondary">Voltage (V)</span>
+                                        <span class="text-cyan fw-bold font-monospace" id="val-voltage">12 V</span>
+                                    </div>
+                                    <input type="range" class="form-range accent-cyan" id="range-voltage" min="1" max="50" value="12" oninput="updateOhmLaw()">
+                                </div>
+                                <div class="mb-3">
+                                    <div class="d-flex justify-content-between text-xs mb-1">
+                                        <span class="text-secondary">Resistance (R)</span>
+                                        <span class="text-violet fw-bold font-monospace" id="val-resistance">100 Ω</span>
+                                    </div>
+                                    <input type="range" class="form-range accent-violet" id="range-resistance" min="10" max="1000" step="10" value="100" oninput="updateOhmLaw()">
+                                </div>
+                            </div>
+
+                            <div id="analog-controls-resistors" class="d-none">
+                                <div class="mb-3">
+                                    <label class="text-secondary text-xs mb-1 d-block">Resistor 1 ($R_1$ in Ω)</label>
+                                    <input type="number" class="form-control bg-black text-light border-secondary border-opacity-25 text-sm font-monospace" id="res-1" value="220" oninput="updateResistorCalc()">
+                                </div>
+                                <div class="mb-3">
+                                    <label class="text-secondary text-xs mb-1 d-block">Resistor 2 ($R_2$ in Ω)</label>
+                                    <input type="number" class="form-control bg-black text-light border-secondary border-opacity-25 text-sm font-monospace" id="res-2" value="330" oninput="updateResistorCalc()">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="fw-bold text-white mb-4" id="analog-output-title">Ohm's Law Analysis (<span class="font-monospace text-cyan">V = I × R</span>)</h4>
+                                <div class="row g-4 mb-4" id="analog-results-box">
+                                    <!-- Populated by JS -->
+                                </div>
+                            </div>
+                            <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10">
+                                <h6 class="fw-bold text-white mb-1"><i class="bi bi-lightbulb text-warning me-1"></i> Engineering Principle</h6>
+                                <p class="text-secondary fs-xs mb-0" id="analog-principle-text">Current is inversely proportional to resistance. Power dissipation scales quadratically with current or voltage changes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Waveform Tab -->
+            <div id="lab-tab-signal" class="lab-sub-tab d-none">
+                <div class="row g-4">
+                    <div class="col-lg-4">
+                        <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 space-y-4">
+                            <h5 class="fw-bold text-white mb-3">Oscilloscope Controls</h5>
+                            <div class="btn-group w-100 mb-3" role="group">
+                                <input type="radio" class="btn-check" name="waveType" id="waveSine" autocomplete="off" checked onclick="setWaveType('sine')">
+                                <label class="btn btn-outline-cyan text-xs fw-bold" for="waveSine">Sine Wave</label>
+                                <input type="radio" class="btn-check" name="waveType" id="waveSquare" autocomplete="off" onclick="setWaveType('square')">
+                                <label class="btn btn-outline-cyan text-xs fw-bold" for="waveSquare">Square Wave</label>
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between text-xs mb-1">
+                                    <span class="text-secondary">Frequency</span>
+                                    <span class="text-cyan fw-bold font-monospace" id="val-freq">2 Hz</span>
+                                </div>
+                                <input type="range" class="form-range accent-cyan" id="range-freq" min="1" max="5" value="2" oninput="updateWaveform()">
+                            </div>
+                            <div class="mb-3">
+                                <div class="d-flex justify-content-between text-xs mb-1">
+                                    <span class="text-secondary">Amplitude</span>
+                                    <span class="text-violet fw-bold font-monospace" id="val-amp">50 V</span>
+                                </div>
+                                <input type="range" class="form-range accent-violet" id="range-amp" min="20" max="80" value="50" oninput="updateWaveform()">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-8">
+                        <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between">
+                            <div>
+                                <h4 class="fw-bold text-white mb-4">Signal Oscilloscope Monitor</h4>
+                                <div class="bg-black rounded-4 p-3 border border-secondary border-opacity-25 position-relative overflow-hidden mb-4" style="height: 250px;">
+                                    <canvas id="waveformCanvas" width="600" height="220" class="w-100 h-100"></canvas>
+                                </div>
+                            </div>
+                            <p class="text-secondary fs-xs mb-0">Real-time HTML5 Canvas rendering of mathematically generated continuous time signals.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. SMART HOME IOT LAB SECTION -->
+        <section id="app-iot" class="container py-5 app-section d-none">
+            <div class="row mb-4 align-items-center">
+                <div class="col">
+                    <h2 class="fw-black text-white">Smart Home IoT Laboratory</h2>
+                    <p class="text-secondary">Automated sensor actuators and fault diagnosis mode.</p>
+                </div>
+                <div class="col-auto">
+                    <button class="btn btn-outline-danger btn-sm rounded-pill px-3 fw-bold text-xs" onclick="toggleFaultMode()" id="fault-mode-btn">
+                        <i class="bi bi-shield-exclamation me-1"></i> Enable Fault Diagnosis Mode
+                    </button>
+                </div>
+            </div>
+
+            <!-- Fault Diagnosis Banner -->
+            <div id="fault-banner" class="glass-card p-4 rounded-4 border border-danger border-opacity-50 bg-danger bg-opacity-10 mb-4 d-none">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-exclamation-triangle-fill text-danger fs-3"></i>
+                    <div>
+                        <h5 class="fw-bold text-white mb-1">Fault Diagnosis Challenge Active</h5>
+                        <p class="text-secondary fs-xs mb-0">Simulated Problem: Exhaust fan fails to activate despite temperature reading 35°C (Threshold > 30°C). Select the root cause below:</p>
+                    </div>
+                </div>
+                <div class="row g-3 mt-3">
+                    <div class="col-md-4">
+                        <button class="btn btn-outline-light w-100 text-start text-xs p-3 rounded-3" onclick="checkFaultAnswer(false)">A) Ambient light sensor calibration drift.</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-outline-light w-100 text-start text-xs p-3 rounded-3" onclick="checkFaultAnswer(true)">B) MOSFET switch gate driver disconnected / GPIO stuck LOW.</button>
+                    </div>
+                    <div class="col-md-4">
+                        <button class="btn btn-outline-light w-100 text-start text-xs p-3 rounded-3" onclick="checkFaultAnswer(false)">C) MQTT broker Wi-Fi timeout.</button>
+                    </div>
+                </div>
+                <div id="fault-feedback" class="mt-3 fs-xs fw-bold"></div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <div class="glass-card p-4 rounded-4 border border-secondary border-opacity-25 space-y-4">
+                        <h5 class="fw-bold text-white mb-3">Simulated IoT Sensors</h5>
+                        
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between text-xs mb-1">
+                                <span class="text-secondary"><i class="bi bi-thermometer-half text-cyan me-1"></i> Temperature</span>
+                                <span class="text-cyan fw-bold font-monospace" id="iot-val-temp">28 °C</span>
+                            </div>
+                            <input type="range" class="form-range accent-cyan" id="iot-range-temp" min="15" max="45" value="28" oninput="updateIoT()">
+                        </div>
+
+                        <div class="mb-3">
+                            <div class="d-flex justify-content-between text-xs mb-1">
+                                <span class="text-secondary"><i class="bi bi-sun text-warning me-1"></i> Ambient Light</span>
+                                <span class="text-warning fw-bold font-monospace" id="iot-val-light">400 lux</span>
+                            </div>
+                            <input type="range" class="form-range accent-warning" id="iot-range-light" min="50" max="1000" step="50" value="400" oninput="updateIoT()">
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-black bg-opacity-50 border border-secondary border-opacity-25 mb-3">
+                            <span class="text-secondary fw-semibold text-xs"><i class="bi bi-person-bounding-box text-violet me-1"></i> Motion Sensor</span>
+                            <button class="btn btn-sm btn-outline-secondary fw-bold px-3" id="iot-motion-btn" onclick="toggleMotion()">CLEAR</button>
+                        </div>
+
+                        <div class="d-flex justify-content-between align-items-center p-3 rounded-3 bg-black bg-opacity-50 border border-secondary border-opacity-25">
+                            <span class="text-secondary fw-semibold text-xs"><i class="bi bi-shield-lock text-success me-1"></i> Security Mode</span>
+                            <button class="btn btn-sm btn-outline-success fw-bold px-3" id="iot-security-btn" onclick="toggleSecurity()">ARMED</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 h-100 d-flex flex-column justify-content-between">
+                        <div>
+                            <h4 class="fw-bold text-white mb-4">Smart Room Actuator State</h4>
+                            <div class="row g-4 mb-4">
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-20 text-center" id="card-actuator-fan">
+                                        <i class="bi bi-fan fs-2 text-muted mb-2 d-block"></i>
+                                        <span class="text-muted d-block text-xs uppercase mb-1">Exhaust Fan</span>
+                                        <h5 class="fw-bold text-secondary mb-0" id="status-fan">OFF</h5>
+                                        <small class="text-muted" style="font-size: 10px;">Trigger > 30°C</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-20 text-center" id="card-actuator-light">
+                                        <i class="bi bi-lightbulb fs-2 text-muted mb-2 d-block"></i>
+                                        <span class="text-muted d-block text-xs uppercase mb-1">Smart Lighting</span>
+                                        <h5 class="fw-bold text-secondary mb-0" id="status-light">OFF</h5>
+                                        <small class="text-muted" style="font-size: 10px;">Trigger < 200 lux</small>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-20 text-center" id="card-actuator-alarm">
+                                        <i class="bi bi-bell fs-2 text-muted mb-2 d-block"></i>
+                                        <span class="text-muted d-block text-xs uppercase mb-1">Security Alarm</span>
+                                        <h5 class="fw-bold text-secondary mb-0" id="status-alarm">SECURE</h5>
+                                        <small class="text-muted" style="font-size: 10px;">Motion + Armed</small>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-10 font-monospace text-xs text-secondary" id="iot-event-log">
+                            [SYSTEM] IoT Node ESP32 connected. Automated control loops initialized.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 5. QUIZ ARENA SECTION -->
+        <section id="app-quiz" class="container py-5 app-section d-none">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 shadow-glow" id="quiz-card-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 6. CODING CHALLENGES SECTION -->
+        <section id="app-challenges" class="container py-5 app-section d-none">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 shadow-glow" id="challenge-card-container">
+                        <!-- Populated by JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 7. AI TUTOR SECTION -->
+        <section id="app-assistant" class="container py-5 app-section d-none">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card rounded-5 border border-secondary border-opacity-25 d-flex flex-column overflow-hidden shadow-glow" style="height: 600px;">
+                        <div class="p-4 bg-dark bg-opacity-80 border-bottom border-secondary border-opacity-25 d-flex align-items-center gap-3">
+                            <div class="brand-icon-box rounded-3 bg-gradient-cyan-violet d-flex align-items-center justify-content-center shadow-neon" style="width: 40px; height: 40px;">
+                                <i class="bi bi-robot text-dark fs-5"></i>
+                            </div>
+                            <div>
+                                <h5 class="fw-bold text-white mb-0">CircuitMind AI Learning Tutor</h5>
+                                <small class="text-success"><i class="bi bi-circle-fill" style="font-size: 8px;"></i> Rule-Based ENTC Expert Assistant</small>
+                            </div>
+                        </div>
+
+                        <div class="flex-grow-1 p-4 overflow-y-auto space-y-3" id="chat-messages-container" style="max-height: 420px;">
+                            <div class="d-flex align-items-start gap-3">
+                                <div class="rounded-circle bg-cyan bg-opacity-10 text-cyan d-flex align-items-center justify-content-center p-2 flex-shrink-0" style="width: 35px; height: 35px;">
+                                    <i class="bi bi-robot"></i>
+                                </div>
+                                <div class="p-3 rounded-4 bg-dark bg-opacity-70 border border-secondary border-opacity-20 text-secondary fs-sm max-w-75">
+                                    Hello! I am CircuitMind AI. Ask me about Ohm's Law, logic gates, adders, sensors, communication systems, or IoT protocols!
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="p-3 bg-dark bg-opacity-80 border-top border-secondary border-opacity-25 d-flex gap-2 overflow-x-auto text-nowrap">
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill text-xs px-3" onclick="sendPrompt('What is Ohm\'s Law?')">What is Ohm's Law?</button>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill text-xs px-3" onclick="sendPrompt('Explain Half Adder and Full Adder')">Explain Adders</button>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill text-xs px-3" onclick="sendPrompt('How does a temperature sensor work?')">Temperature Sensors</button>
+                            <button class="btn btn-sm btn-outline-secondary rounded-pill text-xs px-3" onclick="sendPrompt('What is the Nyquist theorem?')">Nyquist Theorem</button>
+                        </div>
+
+                        <div class="p-3 bg-dark border-top border-secondary border-opacity-25">
+                            <form onsubmit="handleChatSubmit(event)" class="d-flex gap-2">
+                                <input type="text" id="chat-input-field" class="form-control bg-black text-light border-secondary border-opacity-25 rounded-pill px-4 py-2 text-sm shadow-none" placeholder="Ask an ENTC engineering question...">
+                                <button type="submit" class="btn btn-cyan rounded-pill px-4 fw-bold shadow-neon"><i class="bi bi-send"></i></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 8. PROGRESS TRACKER SECTION -->
+        <section id="app-progress" class="container py-5 app-section d-none">
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="glass-card p-4 p-xl-5 rounded-5 border border-secondary border-opacity-25 shadow-glow">
+                        <div class="d-flex justify-content-between align-items-center border-bottom border-secondary border-opacity-25 pb-4 mb-4">
+                            <div>
+                                <h3 class="fw-bold text-white mb-1">My Learning Progress</h3>
+                                <p class="text-secondary fs-xs mb-0">Persistent metrics stored securely via browser localStorage.</p>
+                            </div>
+                            <button class="btn btn-outline-danger btn-sm rounded-pill px-3 fw-bold text-xs" onclick="resetProgressData()">
+                                <i class="bi bi-arrow-counterclockwise me-1"></i> Reset Progress
+                            </button>
+                        </div>
+
+                        <div class="mb-4">
+                            <div class="d-flex justify-content-between text-xs mb-2">
+                                <span class="text-secondary fw-bold">Overall Platform Completion</span>
+                                <span class="text-cyan fw-bold font-monospace" id="progress-percentage-text">0%</span>
+                            </div>
+                            <div class="progress bg-black bg-opacity-50 rounded-pill p-1 border border-secondary border-opacity-25" style="height: 12px;">
+                                <div class="progress-bar bg-gradient-cyan-violet rounded-pill" id="progress-bar-fill" role="progressbar" style="width: 0%"></div>
+                            </div>
+                        </div>
+
+                        <div class="row g-4 mb-4">
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-20 text-center">
+                                    <i class="bi bi-award text-warning fs-2 mb-2 d-block"></i>
+                                    <span class="text-muted d-block text-xs uppercase mb-1">Quiz Best Score</span>
+                                    <h3 class="fw-black text-white font-monospace mb-0" id="progress-quiz-score">0%</h3>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="p-4 rounded-4 bg-black bg-opacity-50 border border-secondary border-opacity-20 text-center">
+                                    <i class="bi bi-terminal text-violet fs-2 mb-2 d-block"></i>
+                                    <span class="text-muted d-block text-xs uppercase mb-1">Challenge Points</span>
+                                    <h3 class="fw-black text-white font-monospace mb-0" id="progress-challenge-score">0 pts</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="glass-card border-top border-secondary border-opacity-25 py-4 mt-auto text-center">
+        <div class="container">
+            <p class="text-secondary fs-xs mb-0">CHAKRAVYUH 2026 • CIRCUITVERSE AI: Smart ENTC Learning & Innovation Platform</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom Script -->
+    <script src="script.js"></script>
 </body>
 </html>
